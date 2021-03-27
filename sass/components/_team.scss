@@ -1,0 +1,153 @@
+/* Секция "Команда" */
+
+.team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $ghost-white;
+}
+
+.employee {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &__card {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 622px;
+    max-width: 450px;
+    background-color: $white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__card:last-child {
+    margin-bottom: 0px;
+  }
+
+  &__card img {
+    max-width: 100%;
+    max-height: 460px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: auto;
+
+    color: $black-text;
+  }
+
+  &__role {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 10px 0px 0px 0px;
+
+    color: $grey-text;
+  }
+
+  &__card-thumb {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+}
+
+// Переназначаем стили для таблетки
+
+@media screen and (min-width: 768px) {
+  .employee {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-bottom: 0px;
+
+    &__card {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-top: 30px;
+      margin-left: 30px;
+      max-height: 536px;
+      max-width: 354px;
+    }
+
+    &__card:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+// Переназначаем стили для десктопа
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .employee {
+    flex-wrap: nowrap;
+    margin-top: 0px;
+
+    &__card {
+      margin-top: 0px;
+    }
+
+    &__card:first-child {
+      margin-left: 30px;
+    }
+  }
+}
+
+/* Задаём характеристики иконок соцсетей */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 0px;
+  margin: 16px 0px 0px 0px;
+
+  &__icon {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: $grey-icon;
+    transition: background-color $transition, color $transition;
+
+    & svg {
+      fill: currentColor;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white-text;
+      background-color: $accent-icon;
+    }
+  }
+}

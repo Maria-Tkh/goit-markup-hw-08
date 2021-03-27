@@ -1,0 +1,205 @@
+/* Задаём верхнюю границу и верхний паддинг для секции "Портфолио" */
+.portfolio {
+  border-top: 1px solid #ececec;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__button {
+    background-color: $ghost-white;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $black-text;
+    padding: 6px 22px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color $transition, color $transition,
+      box-shadow $transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $blue;
+      color: $white-text;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      border: none;
+    }
+  }
+}
+
+.nav-buttons__list {
+  padding-left: 0px;
+  margin: 0;
+}
+
+.nav-button {
+  display: inline-block;
+  margin-left: 8px;
+  margin-bottom: 15px;
+}
+.container__project-list {
+  padding-left: 0px;
+  padding-top: 25px;
+  padding-bottom: 0px;
+  margin: auto;
+}
+
+.project-item {
+  max-width: 450px;
+  min-height: 404px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin: auto;
+
+    color: $black-text;
+  }
+
+  &__type {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    margin: 4px 0px 0px 0px;
+
+    color: $grey-text;
+  }
+
+  &__card-content {
+    padding: 20px 24px;
+    width: 100%;
+  }
+
+  &__card {
+    width: 100%;
+    border: 1px solid #eeeeee;
+    transition: box-shadow $transition;
+
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+
+// Переназначаем стили кнопок для таблетки
+
+@media screen and (min-width: 768px) {
+  .nav-buttons__list {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 30px 0;
+    padding-left: 0px;
+  }
+
+  .nav-button {
+    margin-bottom: 0px;
+
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+}
+
+// Переназначаем стили кнопок для десктопа
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .nav-buttons__list {
+    margin-bottom: 50px;
+  }
+}
+
+/* Перечень проектов */
+
+/* Сетка проектов на flex для таблетки */
+
+@media screen and (min-width: 768px) {
+  .container__project-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-left: -30px;
+    margin-top: -30px;
+    // margin-bottom: 0px;
+  }
+
+  .project-item {
+    flex-basis: calc(100% / 2 - 15px);
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    max-width: 354px;
+
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+/* Сетка проектов на flex для десктопа */
+
+@media screen and (min-width: 1200px) {
+  .project-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    max-width: 370px;
+  }
+}
+
+/* Делаем оверлей на карточки портфолио */
+
+.project-item__card-thumb {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.overlay-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  color: $white-text;
+}
+
+.thumb-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform $transition, opacity $transition;
+}
+
+.project-item__card:hover .thumb-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}

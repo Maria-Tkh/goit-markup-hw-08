@@ -1,0 +1,139 @@
+/* Задаём верхний паддинг секции "Преимущества" */
+
+.advantages {
+  padding-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
+  /* Задаём характеристики элементов секции "Преимущества" */
+  &__item {
+    max-width: 450px;
+    display: block;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 60px;
+  }
+
+  /* Задаём характеристики для иконок преимуществ */
+  &__icon {
+    display: flex;
+    background-color: $ghost-white;
+    max-width: 450px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $black-text;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
+    color: $grey-text;
+  }
+}
+
+// Cтили для таблетки
+
+@media screen and (min-width: 768px) {
+  .container__advantages {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-bottom: 0px;
+  }
+
+  .advantages__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+    width: 354px;
+
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+
+  .advantages {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Стили для десктопа
+
+@media screen and (min-width: 1200px) {
+  .container__advantages {
+    flex-wrap: nowrap;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .advantages {
+    padding-top: 94px;
+
+    /* Задаём характеристики элементов секции "Преимущества" */
+    &__item {
+      max-width: 270px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    &__item:last-child {
+      margin-bottom: 0px;
+    }
+
+    &__item:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    /* Задаём характеристики для иконок преимуществ */
+    &__icon {
+      display: flex;
+      background-color: $ghost-white;
+      width: 270px;
+      height: 120px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+// Секция "Клиенты"
+
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+
+  &__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  /* Задаём характеристики для иконок постоянных клиентов */
+  &__icon {
+    display: flex;
+    color: $grey-icon;
+    background-color: $white;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    max-width: 210px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    transition: border-color $transition, color $transition;
+
+    & svg {
+      fill: currentColor;
+    }
+
+    &:hover svg,
+    &:focus svg,
+    &:active svg {
+      fill: $accent-icon;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $accent-icon;
+    }
+  }
+}
+
+// Переназначаем стили для таблетки
+
+@media screen and (min-width: 768px) {
+  .clients-list {
+    padding-left: 0px;
+
+    &__item {
+      flex-basis: calc(100% / 3 - 30px);
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-right: 0px;
+    }
+
+    &__icon {
+      max-width: 226px;
+      margin-right: 0px;
+    }
+  }
+}
+
+// Переназначаем стили для десктопа
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .clients-list {
+    flex-wrap: nowrap;
+    margin-top: 0px;
+
+    &__item {
+      margin-top: 0px;
+    }
+
+    &__item:first-child {
+      margin-left: 30px;
+    }
+
+    &__icon {
+      width: 170px;
+    }
+  }
+}

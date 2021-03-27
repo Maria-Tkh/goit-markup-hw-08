@@ -1,0 +1,50 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+  }
+
+  &__header {
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__footer {
+    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__advantages {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__project-list {
+    padding-bottom: 94px;
+    background-color: $white;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__header,
+    &__footer,
+    &__advantages {
+      display: flex;
+    }
+  }
+}

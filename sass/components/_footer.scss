@@ -1,0 +1,251 @@
+/* Цвет фона футера */
+.footer {
+  background-color: $black;
+
+  /* Шрифт для адреса в футере */
+  &__address {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
+    color: $white-text;
+  }
+
+  /* Шрифт для электронной почты в футере */
+  &__mail {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    margin: auto;
+
+    color: $white-text-op60;
+    transition: color $transition;
+  }
+  /* Шрифт для телефона в футере */
+  &__tel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
+    color: $white-text-op60;
+    transition: color $transition;
+  }
+}
+
+.contact-section {
+  margin: auto;
+  text-align: center;
+}
+
+.footer__address {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.contact-list {
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 60px;
+}
+
+/* Задаём паддинги и марджины для секции ссылок соцсетей в футере */
+
+.menu-social-links {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Задаём характеристики иконок соцсетей */
+
+.social-links-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0px;
+
+  margin-bottom: 60px;
+
+  &__item:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  &__icon {
+    background: rgba(255, 255, 255, 0.1);
+    color: $white-text;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: background-color $transition;
+
+    & svg {
+      fill: currentColor;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white-text;
+      background-color: $accent-icon;
+    }
+  }
+}
+/* Форма для подписки */
+
+/* Шрифт для "присоединяйтесь" и "подпишитесь" в футере */
+
+.join-us,
+.sign-up-form__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  text-align: center;
+
+  color: $white-text;
+}
+
+.sign-up-form__wrapper {
+  display: block;
+  align-content: center;
+}
+
+.sign-up-form__input {
+  @media screen and (min-width: 320px) {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    position: relative;
+    max-width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid;
+    color: $white-text-op60;
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: $black;
+  }
+}
+
+// Кнопка подписки
+
+.sign-up-form__button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50px;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  border-width: 0px;
+  border-radius: 4px;
+
+  background-color: $blue;
+  color: $white-text;
+  transition: background-color $transition, color $transition;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $white;
+    color: $black-text;
+  }
+}
+
+.icon-send {
+  fill: currentColor;
+  margin-left: 10px;
+}
+
+// Переназначаем стили для таблетки
+
+@media screen and (min-width: 768px) {
+  .container__footer {
+    display: block;
+  }
+
+  .contact-links__footer {
+    display: flex;
+  }
+
+  .menu-social-links {
+    margin-right: 74px;
+  }
+
+  .contact-section {
+    display: block;
+    margin-left: 61px;
+    margin-right: auto;
+  }
+
+  .sign-up-form__input {
+    width: 450px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// Переназначаем стили для десктопа
+
+@media screen and (min-width: 1200px) {
+  .container__footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-section {
+    margin: 0px;
+  }
+
+  .footer__address,
+  .contact-list {
+    padding-left: 0;
+    margin: 0 0 9px 0;
+    text-align: left;
+  }
+
+  .menu-social-links {
+    margin: 0 93px 0 70px;
+  }
+
+  .join-us {
+    padding-top: 9px;
+  }
+
+  .join-us,
+  .sign-up-form__title {
+    text-align: left;
+  }
+
+  .sign-up-form__wrapper {
+    display: flex;
+    height: 50px;
+  }
+  .sign-up-form__input {
+    display: flex;
+    width: 358px;
+  }
+
+  .sign-up-form__button {
+    margin-left: 12px;
+  }
+}
