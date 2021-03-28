@@ -137,7 +137,7 @@
     padding-left: 0px;
     margin-left: -30px;
     margin-top: -30px;
-    // margin-bottom: 0px;
+    margin-bottom: 0px;
   }
 
   .project-item {
@@ -146,6 +146,7 @@
     margin-top: 30px;
     margin-bottom: 0px;
     max-width: 354px;
+    min-height: 100%;
 
     &:not(:last-child) {
       margin-bottom: 0px;

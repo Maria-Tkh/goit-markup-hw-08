@@ -7,7 +7,8 @@
   }
 
   /* Шрифт для ссылок меню хедера */
-  .mobile-menu__link {
+  .mobile-menu__link,
+  .mobile-menu__current-link {
     font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
@@ -24,8 +25,13 @@
     &:focus,
     &:active {
       color: $blue-text;
-      margin-bottom: 36px;
     }
+  }
+
+  /* Подсветка страницы, на которой находится пользователь */
+
+  .mobile-menu__current-link {
+    color: $blue-text;
   }
 
   /* Шрифт для телефона в хедере, выравнивание иконки и телефона, ховер*/
@@ -34,11 +40,10 @@
 
     &__tel {
       font-weight: 500;
-      font-size: 34px;
+      font-size: 32px;
       line-height: 1.18;
       letter-spacing: 0.02em;
       display: block;
-      margin-top: 302px;
       margin-bottom: 32px;
 
       color: $accent-icon;
@@ -132,6 +137,12 @@
     &:focus & {
       fill: $accent-icon;
     }
+  }
+
+  .mobile-menu-contacts-position {
+    position: absolute;
+    bottom: 48px;
+    left: 40px;
   }
 }
 
