@@ -45,7 +45,7 @@
       letter-spacing: 0.02em;
       display: block;
       margin-bottom: 32px;
-
+      margin-top: 302px;
       color: $accent-icon;
       transition: color $transition;
     }
@@ -91,6 +91,7 @@
     height: 100vh;
     padding: 48px 0px 48px 40px;
     background-color: $white;
+    overflow-y: scroll;
     z-index: 999;
 
     transform: translateX(100%);
@@ -139,11 +140,11 @@
     }
   }
 
-  .mobile-menu-contacts-position {
-    position: absolute;
-    bottom: 48px;
-    left: 40px;
-  }
+  // .mobile-menu-contacts-position {
+  //   position: absolute;
+  //   bottom: 48px;
+  //   left: 40px;
+  // }
 }
 
 // Делаем невидимым мобильное меню в форматах таблетки и десктопа

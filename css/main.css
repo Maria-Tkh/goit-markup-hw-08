@@ -2087,6 +2087,7 @@ img {
     letter-spacing: 0.02em;
     display: block;
     margin-bottom: 32px;
+    margin-top: 302px;
     color: #2196f3;
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -2124,6 +2125,7 @@ img {
     height: 100vh;
     padding: 48px 0px 48px 40px;
     background-color: #ffffff;
+    overflow-y: scroll;
     z-index: 999;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -2169,11 +2171,6 @@ img {
   .menu-container__menu-toggle:hover .menu-container__menu-toggle,
   .menu-container__menu-toggle:focus .menu-container__menu-toggle {
     fill: #2196f3;
-  }
-  .mobile-menu-contacts-position {
-    position: absolute;
-    bottom: 48px;
-    left: 40px;
   }
 }
 
