@@ -40,7 +40,9 @@
   text-align: center;
 }
 
-.footer__address {
+.footer__address,
+.footer__mail {
+  display: block;
   margin-bottom: 8px;
   text-align: center;
 }
@@ -221,14 +223,11 @@
   }
 
   .footer__address,
-  .contact-list {
+  .contact-list,
+  .footer__mail {
     padding-left: 0;
     margin: 0 0 9px 0;
     text-align: left;
-  }
-
-  .footer__mail {
-    margin: 0 0 9px 0;
   }
 
   .menu-social-links {
